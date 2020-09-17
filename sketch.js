@@ -72,7 +72,29 @@ function draw() {
   }
   for(var b in particles){
     particles[b].display();
+    if (particles[b].body.position.y>500 && particles[b].body.position.y<520){
+      score=score+1
+      if (particles[b].body.position.x>4 && particles[b].body.position.x<70){
+        score1=score1+1
+      }
+      if (particles[b].body.position.x>85 && particles[b].body.position.x<150){
+        score2=score2+1
+      }
+      if (particles[b].body.position.x>165&& particles[b].body.position.x<230){
+        score3=score3+1
+      }
+      if (particles[b].body.position.x>245 && particles[b].body.position.x<310){
+        score4=score4+1
+      }
+      if (particles[b].body.position.x>325 && particles[b].body.position.x<390){
+        score5=score5+1
+      }
+      if (particles[b].body.position.x>405 && particles[b].body.position.x<470){
+        score6=score6+1
+      }
+    } 
   }
+
   if ( gameState =="end") {
     
     textSize(100);
@@ -80,11 +102,11 @@ function draw() {
     //return
   }
   
-   if (particle.body.position.y>390 && particle.body.position.x>450){
-     score=score+100;
-     textSize(30)
-     text ("Score :" +score,100,200);
-   }
+  //  if (particle.position.y>390 && particle.position.x>450){
+  //    score=score+100;
+  //    textSize(30)
+  //    text ("Score :" +score,100,200);
+  //  }
   drawSprites();
   mousePressed();
 }
